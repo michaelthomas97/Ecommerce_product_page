@@ -1,0 +1,486 @@
+.product_cont{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+
+    @include small-laptop{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding: 0;
+
+    }
+
+    .slider_btns{
+
+        display: none;
+
+        @include small-laptop{
+            position: relative;
+            top: 450px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            
+        }
+
+        @include large-tablet{
+            top: 400px;
+        }
+
+        @include med-tablet{
+            top: 270px;
+        }
+
+        
+        .prev{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            margin: 0px 0px 0px 30px;
+            position: relative;
+
+
+        }
+
+        .next{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            margin: 0px 15px 0px 0px;
+
+        }
+    }
+
+
+
+.slider_cont{
+
+    @include small-laptop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image_container{
+
+
+        .slide{
+
+            display: none;
+
+            .numbertext{
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+
+
+            }
+            img{
+                border-radius: 30px;
+                margin: 40px;
+                max-width: 600px;
+                max-height: 600px;
+
+                @include med-laptop{
+                    max-width: 500px;
+                    max-height: 500px;
+                    }
+
+                @include small-laptop{
+                    margin: 0;
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 0;
+                    padding: 0;
+                 }
+            }
+        }
+
+
+    }
+
+
+
+    .row{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 100px;
+
+
+        @include small-laptop{
+           display: none;
+           margin-bottom: 10px;
+           
+        }
+    }
+
+    .row:after{
+    content: "";
+        display: table;
+        clear: both;
+    
+    }
+
+    .column {
+
+        margin: 0px 20px;
+     
+        @include med-laptop{
+
+            margin: 0px 10px;
+        }
+
+        .demo {
+            opacity: 0.6;
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 30px;
+
+            @include med-laptop{
+                max-width: 110px;
+                max-height: 110px;
+            }
+          }
+
+          .active, .demo:hover {
+            opacity: 1;
+            }
+      }
+
+    }
+
+    .product_txt_cont{
+
+        display: flex;
+        flex-direction: column;
+        margin: 0;        
+        justify-content: center;
+        margin-left: 100px;
+
+
+        @include large-laptop{
+           
+            margin: 100px 0px;
+        }
+
+        @include small-laptop{
+            margin-top: 40px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+         }
+
+
+        .product_text{
+
+
+            .company_name{
+
+                h2{
+
+                    color: hsl(26, 100%, 55%);
+                    opacity: 0.7;
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 600;
+                    font-size: 20px;
+                    position: relative;
+                }
+            }
+
+            .product_header{
+
+                margin: 0;
+                padding: 0;
+
+                h1{
+                    padding: 0;
+                    color: black;
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 600;
+                    position: relative;
+                    font-size: 50px;
+                    margin: 0;
+
+                    @include med-laptop{
+                        font-size: 40px;
+                        }
+                }
+            }
+
+            .product_info{
+
+                p{
+                    color: black;
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 400;
+                    position: relative;
+                    font-size: 19px;
+                    opacity: 0.6;
+
+                    @include med-laptop{
+                        font-size: 15px;
+                        }
+                }
+
+            }
+        }
+        .price_cont{
+
+            @include small-laptop{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            div{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+
+
+                h3{
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 600;
+                    font-size: 30px;
+
+                    @include med-laptop{
+                        font-size: 20px;
+                        }
+                }
+            
+                .discount{
+
+                    margin: 0px 40px 0px 40px;
+                    padding: 0;
+
+                    @include med-laptop{
+                        margin: 0px 40px 0px 40px;
+                        }
+
+                        @include small-laptop{
+                            padding: 0px 50px;
+
+                        }
+
+                    h4{
+                        font-family: 'Kumbh Sans', sans-serif;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: hsl(26, 100%, 55%);
+                        margin: 0;
+                 
+
+                        @include med-laptop{
+                            font-size: 15px;
+                            }
+
+                            @include small-laptop{
+                                position: relative;
+                                right: 60px;
+                            }
+                    }
+
+                    div{
+                        background: hsl(26, 100%, 76%);
+                        padding: 10px 25px;
+                        height: 10px;
+                        position: relative;
+                        right: 49px;
+                        opacity: 0.2;
+                        color: hsl(26, 100%, 55%);
+                        border-radius: 5px;
+                       
+
+                        @include med-laptop{
+                            right: 44px;
+                            }
+
+                            @include small-laptop{
+                                left: -103px;
+                            }
+                    }
+                }
+            }
+
+
+        div{
+     
+            margin: 0;
+            padding: 0;
+                h5{
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 300;
+                    font-size: 22px;
+                    margin: 0;
+                    text-decoration: line-through;
+                    opacity: 0.3;
+
+                    @include med-laptop{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .add_to_cart_cont{
+
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+
+
+
+            @include small-laptop{
+                flex-direction: column;
+                margin-top: 0;
+             }
+
+            .counter{
+                display: flex;
+                padding: 20px 0px;
+                background : hsl(223, 64%, 98%);
+                border-radius: 10px;
+
+                @include med-laptop{
+                    padding: 15px 0px;
+                }
+
+
+                @include small-laptop{
+                    padding: 20px 120px;
+                    margin: 10px 0px;
+                 }
+
+                 @include large-tablet{
+                    margin: 10px 0px;
+                    padding: 20px 125px;
+                 }
+
+                .minus{
+
+                    border: 0px;
+                    background : hsl(223, 64%, 98%);
+                    margin: 0px 12px;
+                    cursor: pointer;
+                    padding: 0px;
+                    position: relative;
+                    bottom: 3.5px;
+
+
+                    img{
+                        @include small-laptop{
+                          position: relative;
+                          right: 100px;
+                            
+                         }
+                    }
+
+                }
+
+                .items{
+                    margin: 0px 40px;
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 800;
+                }
+                .plus{
+
+                    border: 0px;
+                    background : hsl(223, 64%, 98%);
+                    margin: 0px 12px;
+                    cursor: pointer;
+                    padding: 0;
+
+                    img{
+                        @include small-laptop{
+                          
+                          position: relative;
+                          left: 100px;
+                            
+                         }
+                    }
+                }
+            }
+
+            .add_to_cart{
+
+                margin: 0px 50px;
+
+                        @include large-laptop{
+
+                            margin: 0px 40px;
+                        }
+
+                
+                .add{
+                    border: 0;
+                    padding: 20px 110px;
+                    border-radius: 10px;
+                    background:hsl(26, 100%, 55%);
+                    color: white;
+                    font-family: 'Kumbh Sans', sans-serif;
+                    font-weight: 800;
+                    font-size: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                    @include large-laptop{
+
+                        padding: 20px 90px;
+
+                    }
+
+
+                @include med-laptop{
+                    padding: 13px 30px;
+                    font-size: 15px;
+
+                }
+
+                    @include small-laptop{
+                        padding: 20px 140px;
+                        margin: 20px 0px;
+                     }
+
+                     @include large-tablet{
+                        margin: 10px 0px;
+                         padding: 20px 145px;
+                     }
+                    img{
+                        filter: brightness(100);   
+                        position: relative;
+                        bottom: -2px;  
+                        margin: 0px 10px;
+               
+                    }
+                }
+
+                .add:hover{
+                    opacity: 0.7;
+                }
+         
+            }
+
+        }
+
+    }
+
+}

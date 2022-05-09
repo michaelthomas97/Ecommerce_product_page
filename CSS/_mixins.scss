@@ -1,0 +1,46 @@
+//DISPLAY
+
+@mixin flex_cent_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_cent_col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+//HAMBURGER MENU
+@mixin hamburger{
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    margin: 0px 30px;
+    left: 0;
+    top: 48px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include med-tablet{
+        top: 40px;
+        height: 22px;
+        width: 30px;
+    }
+}
+
+@mixin hamburger_lines{
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}

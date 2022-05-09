@@ -1,0 +1,64 @@
+@mixin large-phone{
+    @media (max-width: 400px){
+
+        @content
+
+    }
+};
+
+
+@mixin small-tablet{
+    @media (max-width: 500px){
+
+        @content
+
+    }
+};
+
+@mixin med-tablet{
+    @media (max-width: 700px){
+
+        @content
+
+    }
+};
+
+@mixin large-tablet{
+    @media (max-width: 900px){
+
+        @content
+
+    }
+};
+
+@mixin small-laptop{
+    @media (max-width: 1100px){
+
+        @content
+
+    }
+};
+
+@mixin med-laptop{
+    @media (max-width: 1300px){
+
+        @content
+
+    }
+};
+
+@mixin large-laptop{
+    @media (max-width: 1500px){
+
+        @content
+
+    }
+};
+
+@mixin four-k{
+    @media (max-width: 1800px){
+
+        @content
+
+    }
+};
